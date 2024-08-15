@@ -11,7 +11,6 @@
 - python 3.11
 - fastapi
 - jinja2
-- pre-commit
 - flake8
 - black
 - dadata
