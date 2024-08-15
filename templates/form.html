@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Получить адрес по координатам</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            width: 300px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button[type="submit"] {
+            width: 100%;
+            background-color: #0c5ccd;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0c5ccd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Введите координаты</h1>
+    <form action="/result" method="post">
+      <label>
+        <input name="latitude" type="number" step="any" placeholder="Широта" required min="-90" max="90">
+      </label>
+      <label>
+        <input name="longitude" type="number" step="any" placeholder="Долгота" required min="-180" max="180">
+      </label>
+      <button type="submit">Получить адрес</button>
+    </form>
+</body>
+</html>

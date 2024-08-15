@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .container {
+            max-width: 700px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .card-body p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card mx-auto mt-5">
+          <div class="card-body">
+            <h3 class="card-title text-center">Адрес</h3>
+            <p class="card-text text-center">{{ full_address }}</p>
+            {% if city is not none %}
+            <h3 class="card-title text-center">Город</h3>
+            <p class="card-text">{{ city }}</p>
+            {% endif %}
+
+            {% if region is not none %}
+            <h3 class="card-title text-center">Регион</h3>
+            <p class="card-text">{{ region }}</p>
+            {% endif %}
+
+            {% if area is not none %}
+            <h3 class="card-title text-center">Район</h3>
+            <p class="card-text">{{ area }}</p>
+            {% endif %}
+
+            {% if settlement is not none %}
+            <h3 class="card-title text-center">Поселение</h3>
+            <p class="card-text">{{ settlement }}</p>
+            {% endif %}
+
+            {% if street is not none %}
+            <h3 class="card-title text-center">Улица</h3>
+            <p class="card-text">{{ street }}</p>
+            {% endif %}
+
+            {% if house is not none %}
+            <h3 class="card-title text-center">Дом</h3>
+            <p class="card-text">{{ house }}</p>
+            {% endif %}
+
+            {% if postal_code is not none %}
+            <h3 class="card-title text-center">Индекс</h3>
+            <p class="card-text">{{ postal_code }}</p>
+            {% endif %}
+
+            {% if kladr_code is not none %}
+            <h3 class="card-title text-center">Код КЛАДР</h3>
+            <p class="card-text">{{ kladr_code }}</p>
+            {% endif %}
+
+            {% if fias_code is not none %}
+            <h3 class="card-title text-center">Код ФИАС (ГАР)</h3>
+            <p class="card-text">{{ fias_code }}</p>
+            {% endif %}
+          </div>
+          <a href="/" class="btn btn-primary">Назад</a>
+        </div>
+    </div>
+</body>
+</html>
